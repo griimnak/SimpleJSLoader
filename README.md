@@ -1,7 +1,7 @@
 SimpleJSLoader
 -------------------
 
-This is a simple, one page script to load content into a container without freshing the page.
+This is a simple, one page script to load body content without freshing the page.
 
 Written in pure Javascript
 
