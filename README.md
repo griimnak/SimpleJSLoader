@@ -10,5 +10,5 @@ Written in pure Javascript
 - Assign an ID to your body tag `<body id="mainContent">`
 - Format your anchors `<a href="?mainContent=index">Home</a>`
 <br /><br />
-Notice how the `<body>` ID and `<a>` format match, this is required. Name them whatever you like.
+Notice how the `<body>` ID and `<a>` format match, this is required. Name them whatever you like. <br />
 Variable after "="" is the URI to request
