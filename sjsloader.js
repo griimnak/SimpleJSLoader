@@ -9,7 +9,7 @@
         Format your anchors      <a href="index?mainContent=index">Home</a>
 
         Notice how the <body> ID and anchor format match, this is required. Name them whatever you like.
-        Variable after "="" is the URI to request, variable before "?" is fallback
+        Variable after "="" is the URI to request
 
         Done!
 */
