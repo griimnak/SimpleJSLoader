@@ -13,6 +13,7 @@
 
         Done!
 */
+
 window.onload = function() {
     var load = function(e) {
         // prevent browser to load link
@@ -65,9 +66,18 @@ window.onload = function() {
 
 
         successCallback = function() {
-
             // on success place response content in the specified container
-            document.getElementById(container).innerHTML = request.responseText;
+            var parser;
+            if (window.DOMParser) {
+                parser = new DOMParser();
+            }
+            else {
+                parser = new ActiveXObject("Microsoft.XMLDOM");
+            }
+            var parsed = parser.parseFromString(request.responseText, "text/html");
+            var content = parsed.getElementById(container).innerHTML;
+
+            document.getElementById(container).innerHTML = content;
 
             // Execute scripts in eval since innerHTML disallows execution.
             var allScripts = document.getElementById(container).getElementsByTagName('script');
