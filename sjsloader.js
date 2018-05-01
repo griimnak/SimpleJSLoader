@@ -1,17 +1,13 @@
 /*
     SimpleJSLoader
-
-    Source : https://github.com/griimnak
-    Usage  :
-
+    Usage:
         Include this script      <script type="text/javascript" src="/sjsloader.js"></script>
         ID your body tag         <body id="mainContent">
         Format your anchors      <a href="index?mainContent=index">Home</a>
 
         Notice how the <body> ID and anchor format match, this is required. Name them whatever you like.
         Variable after "="" is the URI to request
-
-        Done!
+        Thank you to everyone who contributed to the source
 */
 window.onload = function() {
     var load = function(e) {
