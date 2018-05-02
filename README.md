@@ -10,12 +10,12 @@ Supports internal and external scripts dynamically
 #### Usage
 - Include this script `<script type="text/javascript" src="/sjsloader.js"></script>`
 - Format your anchors `<a class="autoLoad" href="/body/toload">Home</a>`
-- Content to load and replace = <body>
+- Content to load and replace = `<body>`
 <br /><br />
 Done!
 
-Your /body/toload HTML page may also contain a valid `<title>` to load.
-Your `<body>` may contain internal or external scripts aswell.
+Your /body/toload HTML page may also contain a valid `<title>` to load.<br />
+Your `<body>` may contain internal or external scripts aswell. <br />
 Remember that autoloading uses the current `<head>`, use a normal `<a>` and autoload from there on, to get your new `<head>`.
 <br /><br />
 
