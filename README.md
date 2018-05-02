@@ -21,7 +21,7 @@ Remember that autoloading uses the current `<head>`, use a normal `<a>` and auto
 
 Here's a detailed usage example.
 
-####/index
+#### /index
 ```sh
 <!DOCTYPE html>
 <html>
@@ -47,7 +47,7 @@ Here's a detailed usage example.
 </html>
 ```
 
-####/freshpage
+#### /freshpage
 ```sh
 <!DOCTYPE html>
 <html>
@@ -73,7 +73,7 @@ Here's a detailed usage example.
 </html>
 ```
 
-####/autoloaded
+#### /autoloaded
 ```sh
 <!DOCTYPE html>
 <html>
@@ -99,19 +99,19 @@ Here's a detailed usage example.
 </html>
 ```
 
-####/site.js
+#### /site.js
 ```sh
 console.log("Hello world, from external script");
 ```
 
-####/myglobal.css
+#### /myglobal.css
 ```sh
 * {
   color: green;
 }
 ```
 
-####/mydifferent.css
+#### /mydifferent.css
 ```sh
 * {
   color: red;
