@@ -52,7 +52,7 @@ Here's a detailed usage example.
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Index - Welcome!</title>
+  <title>Fresh page</title>
   <!-- Initial css, this will be used for all autoloaded pages. -->
   <link rel="stylesheet" href="/mydifferent.css">
 </head>
