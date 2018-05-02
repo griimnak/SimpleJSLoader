@@ -1,6 +1,5 @@
 /*
     SimpleJSLoader
-
     Source : https://github.com/griimnak
     Usage  :
 
