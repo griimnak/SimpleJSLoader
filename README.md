@@ -20,6 +20,24 @@ Remember that autoloading uses the current `<head>`, use a normal `<a>` and auto
 <br /><br />
 
 Here's a detailed usage example.
+#### /site.js
+```sh
+console.log("Hello world, from external script");
+```
+
+#### /myglobal.css
+```sh
+* {
+  color: green;
+}
+```
+
+#### /mydifferent.css
+```sh
+* {
+  color: red;
+}
+```
 
 #### /index
 ```sh
@@ -99,21 +117,4 @@ Here's a detailed usage example.
 </html>
 ```
 
-#### /site.js
-```sh
-console.log("Hello world, from external script");
-```
 
-#### /myglobal.css
-```sh
-* {
-  color: green;
-}
-```
-
-#### /mydifferent.css
-```sh
-* {
-  color: red;
-}
-```
