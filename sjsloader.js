@@ -55,6 +55,35 @@ var autoLoad = function(e) {
     // execute the request
     request.send('');
 
+    function loadJS(url){
+        var xhr;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        }
+        else {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState < 4) {
+                // handle preload
+                return;
+            }
+            if(xhr.status !== 200) {
+                // handle error
+                console.log(url + " could not be retreived.");
+                return;
+            }
+            if(xhr.readyState === 4) {
+                // handle successful request
+                eval(xhr.responseText);
+            }
+        }
+
+        xhr.open("GET",url,true);
+        xhr.send(); 
+    }
+
     successCallback = function() {
         // on success place response content in the specified container
         var parser;
@@ -80,33 +109,7 @@ var autoLoad = function(e) {
         for (var n = 0; n < allScripts .length; n++) {
             if (allScripts[n].src) {
                 // if script is external
-                function loadJS(url,onDone,onError){
-                    if(!onDone)onDone=function(){};
-                    if(!onError)onError=function(){};
-                    var request;
-                    if (window.XMLHttpRequest) {
-                        xhr = new XMLHttpRequest();
-                    }
-                    else {
-                        xhr = new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    xhr.onreadystatechange= function() {
-                        if(xhr.readyState==4){
-                            if(xhr.status==200||xhr.status==0){
-                                try{ eval(xhr.responseText); }
-                                catch(e) { onError(e); return; }
-                                onDone();
-                            }else{ onError(xhr.status); }
-                        }
-                    }.bind(this);
-                    try{
-                        xhr.open("GET",url,true);
-                        xhr.send();
-                    }catch(e){
-                        onError(e);
-                  }  
-                }
-                loadJS(allScripts[n].src)
+                loadJS(allScripts[n].src);
             } else {
                 // if script is internal
                 eval(allScripts[n].innerHTML);
