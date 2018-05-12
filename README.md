@@ -1,6 +1,8 @@
 SimpleJSLoader
 -------------------
 
+(In live use: https://griimnak.me)
+
 This is a simple, one page script to load body content without freshing the page.
 
 Written in pure Javascript
